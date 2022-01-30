@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Webpage Title -->
+    <title></title>
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- INFO Some styles are attached dynamically after page load. See the bottom of <body> tag -->
+  </head>
+  <body>
+
+    <!-- Content goes here -->
+    <h1>Hello, world!</h1>
+    <h2>Hello, world!</h2>
+    <h3>Hello, world!</h3>
+    <button type="button" class="btn btn-secondary">Zaimportowaliśmy też Bootstrapa, a ten przycisk jest tego dowodem</button>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+    <script type="text/javascript">
+        const styles = [
+            'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap',
+        ]
+
+        $(document).ready(() => {
+            styles.forEach((style) => {
+                if (document.createStyleSheet){
+                    document.createStyleSheet(style);
+                }
+                else {
+                    $("head").append($(`<link rel='stylesheet' href='${style}' type='text/css' media='screen' />`));
+                }  
+            })
+        });
+    </script>
+  </body>
+</html>
